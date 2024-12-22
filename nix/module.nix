@@ -368,7 +368,7 @@ in
       ensureDatabases = [ cfg.database.database ];
       ensureUsers = [
         { name = cfg.database.user;
-          ensurePermissions = { "DATABASE ${cfg.database.database}" = "ALL PRIVILEGES"; }; 
+          ensureDBOwnership = true;
         }
       ];
     };
